@@ -1,0 +1,29 @@
+
+// Archivo de compilación de nivel superior donde puede agregar opciones de configuración comunes a
+// todos los subproyectos / módulos.
+
+buildscript {
+    repositories {
+        google()
+        jcenter()
+        mavenLocal()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.6.1'
+        classpath 'com.google.ar.sceneform:plugin:1.15.0'
+        // NOTA: No coloque las dependencias de su aplicación aquí; ellos pertenecen
+        // en los archivos individuales del módulo build.gradle
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        mavenLocal()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
